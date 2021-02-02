@@ -3,7 +3,7 @@ import 'package:Ecommerce/page2.dart';
 
 // import 'package:flutter/page2.dart';
 void main() {
-  runApp(Homepg());
+  runApp(Myapp());
 }
 
 class Myapp extends StatelessWidget {

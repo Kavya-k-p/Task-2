@@ -12,29 +12,39 @@ class Trdpage extends StatefulWidget {
 class _TrdpageState extends State<Trdpage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.indigoAccent[100],
-                  Colors.white70,
-                ]),
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                alignment: Alignment.topCenter,
+                image: AssetImage('images/trd.png'),
+              ),
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.indigoAccent[100],
+                    Colors.white70,
+                  ]),
+            ),
+            // child: Column(
+            //   children: <Widget>[
+            //     Image(
+            //       image: AssetImage(
+            //         'images/trd.png',
+            //       ),
+            //     ),
           ),
-          child: SingleChildScrollView(
+          SingleChildScrollView(
             child: Column(
+              // Container(
+              // alignment: Alignment.center,
+              // padding: EdgeInsets.fromLTRB(35, 10, 20, 20),
               children: <Widget>[
-                Image(
-                  image: AssetImage(
-                    'images/trd.png',
-                  ),
-                ),
                 Container(
-                  // alignment: Alignment.center,
-                  padding: EdgeInsets.fromLTRB(35, 10, 20, 20),
+                  padding: EdgeInsets.fromLTRB(5, 130, 220, 20),
                   child: Text(
                     'Kleine.',
                     style: TextStyle(
@@ -44,10 +54,9 @@ class _TrdpageState extends State<Trdpage> {
                     ),
                   ),
                 ),
-                
                 Container(
                   alignment: Alignment.center,
-                  padding: EdgeInsets.fromLTRB(32, 1, 110, 10),
+                  padding: EdgeInsets.fromLTRB(32, 10, 110, 10),
                   child: Text(
                     'Lets Register.',
                     style: TextStyle(
@@ -59,7 +68,7 @@ class _TrdpageState extends State<Trdpage> {
                 ),
                 Container(
                   // alignment: Alignment.center,
-                  padding: EdgeInsets.fromLTRB(35, 220, 20, 20),
+                  padding: EdgeInsets.fromLTRB(5, 10, 115, 20),
                   child: Text(
                     'Do you have an account? Login',
                     style: TextStyle(
@@ -71,7 +80,7 @@ class _TrdpageState extends State<Trdpage> {
                 ),
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(50, 275, 40, 10),
+                    padding: const EdgeInsets.fromLTRB(50, 15, 40, 10),
                     child: Column(
                       children: [
                         Container(
@@ -103,7 +112,7 @@ class _TrdpageState extends State<Trdpage> {
                 ),
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(50, 335, 40, 10),
+                    padding: const EdgeInsets.fromLTRB(50, 5, 40, 10),
                     child: Column(
                       children: [
                         Container(
@@ -135,7 +144,7 @@ class _TrdpageState extends State<Trdpage> {
                 ),
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(50, 395, 40, 10),
+                    padding: const EdgeInsets.fromLTRB(50, 5, 40, 10),
                     child: Column(
                       children: [
                         Container(
@@ -149,7 +158,39 @@ class _TrdpageState extends State<Trdpage> {
                             textAlign: TextAlign.start,
                             decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Email Id',
+                              hintText: 'Email',
+                              contentPadding: EdgeInsets.all(15.0),
+                              hintStyle: TextStyle(
+                                color: Colors.black.withOpacity(0.3),
+                              ),
+                            ),
+                            // (
+                            // borderRadius: BorderRadius.all(
+                            //   Radius.circular(35.0),
+                            // ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(50, 5, 40, 10),
+                    child: Column(
+                      children: [
+                        Container(
+                          alignment: Alignment.topCenter,
+                          decoration: BoxDecoration(
+                            color: Colors.white.withOpacity(0.9),
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                          height: 50.0,
+                          child: TextField(
+                            textAlign: TextAlign.start,
+                            decoration: InputDecoration(
+                              border: InputBorder.none,
+                              hintText: 'Phone Number',
                               contentPadding: EdgeInsets.all(15.0),
                               hintStyle: TextStyle(
                                 color: Colors.black.withOpacity(0.3),
@@ -166,7 +207,7 @@ class _TrdpageState extends State<Trdpage> {
                   ),
                 ),
                 FlatButton(
-                  padding: EdgeInsets.fromLTRB(60, 455, 50, 40),
+                  padding: EdgeInsets.fromLTRB(60, 5, 50, 10),
                   onPressed: () {},
                   child: Container(
                     height: 50,
@@ -186,7 +227,7 @@ class _TrdpageState extends State<Trdpage> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(50, 505, 40, 40),
+                  padding: EdgeInsets.fromLTRB(50, 5, 40, 40),
                   child: Wrap(
                     children: <Widget>[
                       // ButtonTheme(
@@ -222,7 +263,7 @@ class _TrdpageState extends State<Trdpage> {
               ],
             ),
           ),
-        ),
+        ],
       ),
     );
   }
