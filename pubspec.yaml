@@ -49,6 +49,11 @@ flutter:
      - images/fst.png
      - images/scnd.png
      - images/trd.png
+     - images/chair1.png
+     - images/chair2.png
+     - images/chair3.png
+     - images/chair4.png
+     - images/chair5.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
