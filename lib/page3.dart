@@ -1,3 +1,4 @@
+import 'package:Ecommerce/page5.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -208,7 +209,16 @@ class _TrdpageState extends State<Trdpage> {
                 ),
                 FlatButton(
                   padding: EdgeInsets.fromLTRB(60, 5, 50, 10),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return Fifpg();
+                        },
+                      ),
+                    );
+                  },
                   child: Container(
                     height: 50,
                     width: 280,
